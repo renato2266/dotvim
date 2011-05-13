@@ -1,0 +1,26 @@
+Keep your dotfiles in git
+
+The following instructions assume that your home directory contains a .vimrc file, a .vim directory and a .gvimrc file (optional).
+
+Move the .vimrc and .gvimrc files into the .vim directory:
+
+mv .vimrc ~/.vim/vimrc
+mv .gvimrc ~/.vim/gvimrc
+
+Create symbolic links so that ~/.vimrc points to the ~/.vim/vimrc file:
+
+ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
+Change to the .vim directory, and initialize it as a git repository:
+
+cd ~/.vim
+git init
+Create a README file, and paste installation instructions into it (see example README).
+
+Add all files, and make an initial commit:
+
+git add .
+git commit -m "Initial commit"
+
+I suggest publishing your dotvim files to github: it’s really easy to set up an account, and they host open source projects for free. In the video, I demonstrate how to publish a git repository to github.
+
